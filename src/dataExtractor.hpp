@@ -96,10 +96,10 @@ vector<double> featureExtract(email in, vector<string> trustedContacts, vector<s
             return {}; // or throw
         }
 
-        file << endl << in._sender << "," << 8.01;
+        file << endl << in._sender << "," << 8.1;
         file.close();
 
-        reputation = 8.01;
+        reputation = 8.1;
     }
 
     return {double(isUntrusted), exclMarks, percentageCaps(in._body), double(hasSuspiciousWords), double(!(in._attachment=="none")), reputation};
