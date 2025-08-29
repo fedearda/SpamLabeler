@@ -104,3 +104,34 @@ g++ -o spam_labeler main.cpp
 ## Future implementations
 
 Add a system to increase or decrease the scoring based on mails labeled as spam
+
+# featureSort.cpp
+
+**FeatureSort** Computes the **Information Gain** of each feature in the dataset and orders them by relevance. Features with higher Information Gain appear first in the decision tree, making them more important for classification.
+
+## Feature Sorting and Information Gain Calculation
+
+The **`featureSort.cpp`** module calculates the **Information Gain** of each feature in the dataset, which is crucial for building a **binary decision tree**. This module helps to determine the relevance of each feature, with the features having the highest Information Gain being prioritized at the top of the tree.
+
+### Purpose:
+- This script is used to evaluate the importance of different features based on **Information Gain**.
+- Features with the **highest Information Gain** will appear first in the binary decision tree, and features with the **lowest Information Gain** will appear last.
+
+### How It Works:
+- **Information Gain** is computed by measuring the change in entropy before and after a feature splits the dataset into two groups based on a threshold.
+- **Entropy** is a measure of impurity or uncertainty (the higher the entropy, the less certain we are about the group).
+- **Information Gain** measures the reduction in entropy caused by knowing the value of a particular feature.
+
+### Steps in the Script:
+1. **Entropy Calculation:** The entropy of the entire dataset is computed initially.
+2. **Information Gain Calculation:** The dataset is split based on each feature's threshold, and the Information Gain is calculated by comparing the entropy before and after the split.
+3. **Sorting Features:** The features are then sorted in descending order based on their Information Gain, and the results are displayed.
+
+### Running the Script:
+- The script will display the **Information Gain** of each feature and output the features ordered by their relevance.
+  
+#### Example Output:
+```text
+Feature: Is from an untrusted contact --> Information Gain: 0.54
+Feature: Number of exclamative points --> Information Gain: 0.45
+Feature: Reputation score of sender --> Information Gain: 0.33
