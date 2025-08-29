@@ -3,3 +3,8 @@ spammy@scam.com,1.12
 bob@example.com,7.9
 alice@example.com,4.3
 maurice@gmail.com,9.1
+philip@domain.com,8.01
+admin@website.org,8.01
+noreply@service.net,8.01
+jane@company.org,8.01
+hello@domain.com,8.01

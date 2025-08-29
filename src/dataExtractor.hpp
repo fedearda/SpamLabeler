@@ -88,6 +88,19 @@ vector<double> featureExtract(email in, vector<string> trustedContacts, vector<s
 
     double reputation = 0.0;
     if (peopleList.find(in._sender) != peopleList.end()) reputation = peopleList.at(in._sender);
+    else { //write on file the new sender
+        ofstream file(REPUTATIONLIST_PATH,ios::app);
+
+        if (!file.is_open()) {
+            cerr << "Error opening file: " << REPUTATIONLIST_PATH << endl;
+            return {}; // or throw
+        }
+
+        file << endl << in._sender << "," << 8.01;
+        file.close();
+
+        reputation = 8.01;
+    }
 
     return {double(isUntrusted), exclMarks, percentageCaps(in._body), double(hasSuspiciousWords), double(!(in._attachment=="none")), reputation};
 }
