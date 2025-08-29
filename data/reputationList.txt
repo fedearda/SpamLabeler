@@ -1,0 +1,5 @@
+carol@example.com,8.12
+spammy@scam.com,1.12
+bob@example.com,7.9
+alice@example.com,4.3
+maurice@gmail.com,9.1
