@@ -1,3 +1,1 @@
-- implement a email reader from file
-- instead of checking only "free" as word, check the presence of any word from a list of suspicious terms
 - implement a functionality that updates the score of a sender when an email is detected as spam
