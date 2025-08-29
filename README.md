@@ -103,7 +103,7 @@ g++ -o spam_labeler main.cpp
 
 ## Future implementations
 
-Add a system to increase or decrease the scoring based on mails labeled as spam
+- Simulate an exchange of emails that happen at a different time 
 
 # featureSort.cpp
 

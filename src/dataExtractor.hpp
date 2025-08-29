@@ -127,3 +127,18 @@ vector<email> readEmail(const string& filename){
     
     return emails;
 }
+
+//function to be called in the main after each call of evaluation() -> after each evaluation, the reputation score is uploaded
+// locally, but this change needs to be stored in the file REPUTATIONLIST_PATH
+void updateRep(unordered_map<string,double> peopleList){
+    ofstream file(REPUTATIONLIST_PATH);
+
+    if (!file.is_open()) {
+        cerr << "Failed to open file for overwriting." << endl;
+    }
+
+    for (auto &e: peopleList){
+        file << e.first << "," << e.second << endl;
+    }
+
+}   

@@ -18,11 +18,25 @@ int main(){
     
     Node* spamDetector = buildTree();
 
-    for (auto &m: emailList) featuresList.push_back(featureExtract(m,trustedContacts,suspiciousWords,peopleList));
+    for (auto &m: emailList) {
+        auto f = featureExtract(m,trustedContacts,suspiciousWords,peopleList);
+        bool isSpam = evaluate(f, spamDetector);
+        cout << "Mail " << m._object << " is " << (isSpam ? "SPAM" : "NOT SPAM") << endl;
+        if (isSpam){
+            f[REPUTATION_SCORE] = f[REPUTATION_SCORE] - 0.7;
+            if (f[REPUTATION_SCORE] < 0.0) f[REPUTATION_SCORE] = 0.0;
+        }
+        else {
+            f[REPUTATION_SCORE] = f[REPUTATION_SCORE] + 0.1;
+            if (f[REPUTATION_SCORE] > 10.0) f[REPUTATION_SCORE] = 10.0;
+        }
+        featuresList.push_back(f);
+        peopleList[m._sender] = f[REPUTATION_SCORE];
+    }
 
-    test(spamDetector);
+    updateRep(peopleList);
 
-    for (int i{0}; i<featuresList.size();++i) cout << "Mail " << i+1 << " is " << ( evaluate(featuresList[i], spamDetector) ? "SPAM" : "NOT SPAM" ) << endl;
+    // test(spamDetector);
 
     destroyTree(spamDetector);
 
