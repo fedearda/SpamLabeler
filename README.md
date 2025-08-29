@@ -38,7 +38,7 @@ Example:
 alice@example.com,4.3
 bob@example.com,7.9
 spammy@scam.com,1.12
-
+```
 
 ### 4. **suspiciousWords.txt**
 This file contains a list of words commonly found in spam emails (e.g., "free", "win", "urgent"). The presence of these words in the subject or body can increase the likelihood of an email being spam.
@@ -50,7 +50,7 @@ urgent
 win
 dollars
 rich
-
+```
 
 ## Features Extraction
 
@@ -86,3 +86,4 @@ The decision tree is structured with nodes that correspond to the features and t
 ```bash
 git clone https://github.com/yourusername/spam-labeler.git
 cd spam-labeler
+```
