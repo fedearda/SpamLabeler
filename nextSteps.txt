@@ -1,1 +1,0 @@
-- implement a functionality that updates the score of a sender when an email is detected as spam

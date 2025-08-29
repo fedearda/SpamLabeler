@@ -29,6 +29,7 @@ Example:
 alice@example.com "Win a free iPhone" "none" "Click here to claim your prize now!"
 bob@example.com "Meeting Schedule" "agenda.docx" "Let's meet at 3pm to discuss the roadmap."
 spammy@scam.com "Urgent: Account Suspended" "none" "Login now to reactivate your account."
+```
 
 ### 3. **reputationList.txt**
 This file stores the reputation scores of different senders. A higher reputation score means the email is less likely to be spam.
@@ -87,3 +88,19 @@ The decision tree is structured with nodes that correspond to the features and t
 git clone https://github.com/yourusername/spam-labeler.git
 cd spam-labeler
 ```
+
+2. Compile the code:
+```bash
+g++ -o spam_labeler main.cpp
+```
+
+3. Run the program:
+```bash
+./spam_labeler
+```
+
+4. The program will output whether each email in emails.tsv is SPAM or NOT SPAM.
+
+## Future implementations
+
+Add a system to increase or decrease the scoring based on mails labeled as spam
