@@ -85,18 +85,18 @@ The decision tree is structured with nodes that correspond to the features and t
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/spam-labeler.git
+git clone https://github.com/fedearda/SpamLabeler.git
 cd spam-labeler
 ```
 
 2. Compile the code:
 ```bash
-g++ -o spam_labeler main.cpp
+g++ -o SpamLabeler main.cpp
 ```
 
 3. Run the program:
 ```bash
-./spam_labeler
+./SpamLabeler
 ```
 
 4. The program will output whether each email in emails.tsv is SPAM or NOT SPAM.
