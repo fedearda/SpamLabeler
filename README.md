@@ -26,9 +26,9 @@ This file contains email data, with each email's sender, subject, attachment typ
 
 Example:
 ```markdown
-alice@example.com "Win a free iPhone" "none" "Click here to claim your prize now!"
-bob@example.com "Meeting Schedule" "agenda.docx" "Let's meet at 3pm to discuss the roadmap."
-spammy@scam.com "Urgent: Account Suspended" "none" "Login now to reactivate your account."
+alice@example.com Win a free iPhone none Click here to claim your prize now!
+bob@example.com Meeting Schedule agenda.docx Let's meet at 3pm to discuss the roadmap.
+spammy@scam.com Urgent: Account Suspended none Login now to reactivate your account.
 ```
 
 ### 3. **reputationList.txt**
